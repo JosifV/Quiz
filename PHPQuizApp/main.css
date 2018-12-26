@@ -1,0 +1,194 @@
+html, body{
+    padding:0;
+    margin:0;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border-radius: 100%;
+  border:none;
+}
+
+#myBtn:hover {
+  background-color: lightgrey;
+  color:hsl(0, 0%, 20%);
+
+}
+#wrapper{
+    padding:0;
+    margin:0;
+        background:hsl(0, 0%, 95%);
+}
+#header{
+    height: 100vh;
+    padding:0;
+    background-image: url('headerDet.jpg');
+    color:white;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+}
+
+#backDr{
+    height: 100vh;
+      animation-name: backdrop;
+        animation-duration: 3s;  
+        animation-fill-mode: forwards;
+        animation-delay:0.3s;
+        }
+@keyframes backdrop{
+    from{
+        background: hsl(300, 100%, 10%, 0%);
+    }
+    to{
+        background: hsl(300, 100%, 10%, 55%);
+    }
+}
+#backDr h1{
+    margin:0;
+}
+#backDr p{
+    font-size:1.5rem;
+    margin-top:0.5rem;
+}
+#headerCont{
+    padding:5rem;
+}
+#headerCont p:last-child {
+ font-size:2rem;
+}
+
+#kvizForm{
+    padding:0 10rem 2rem 10rem;
+    margin-top:1.5rem;
+}
+#kvizForm h3{
+    font-size:1.5rem;
+    margin-top:0.5rem;
+    font-weight:bold;
+}
+#layout{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+#right-sidebar{
+    background:#333;
+    -webkit-clip-path: polygon(100% 0, 100% 38%, 100% 100%, 0 100%, 0 2%);
+clip-path: polygon(100% 0, 100% 38%, 100% 100%, 0 100%, 0 2%);
+}
+#sidebarCont{
+    color:white;
+    padding: 5rem 1rem;
+}
+#rezultati{
+    margin-top:1.5rem;
+}
+#rezYnosHallOfFame{
+    background:lightgray;
+    padding:5rem;
+}
+#rezYnosHallOfFame .btn{
+        padding:2rem;
+        font-size:1.5rem;
+        border-radius:10px;
+}
+#rezYnosHallOfFame .form-control{
+        padding:2rem;
+        font-size:1.5rem;
+        border-radius:10px;
+        animation-name: onBlur;
+        animation-duration: 1.5s;  
+        animation-fill-mode: forwards;
+}
+#rezYnosHallOfFame .form-control:focus{
+        animation-name: onFokus;
+        animation-duration: 1.5s;  
+        animation-fill-mode: forwards;
+}
+@keyframes onBlur{
+    from{
+    background: #262626;
+    color:white;
+    }
+    to{
+    background: white;
+    color:#262626;
+    }
+}
+@keyframes onFokus{
+    from{
+    background: white;
+    color:#262626;
+    }
+    to{
+    background: #262626;
+    color:white;
+    }
+}
+#footer{
+    background:#262626;
+    color:white;
+    padding:2rem 5rem;
+}
+#footer .col-md-6{
+    font-size:2.5rem;
+}
+#footer .col-md-6 h6{
+    color:#0099ff;
+}
+#footer #potpisss{
+    font-size:1.5rem;
+}
+#footer .col-md-6 a:hover{
+    text-decoration:none;
+}
+@media screen and (max-width: 780px) {
+  #header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  #headerCont{
+    padding:0;
+}
+#layout{
+    display: block;
+}
+  #right-sidebar{
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+text-align:center;
+  }
+/*   #myBtn {
+  right: 50%; */
+}
+@media screen and (max-width: 980px) {
+  #myBtn {
+  right: 50%; 
+}
+#layout{
+    display: block;
+}
+  #right-sidebar{
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    text-align:center;
+  }
+}
+/* @media screen and (max-width: 1152px) {
+#layout{
+    display: block;
+}
+  #right-sidebar{
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    text-align:center;
+  }
+
+} */
